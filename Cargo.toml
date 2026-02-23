@@ -1,0 +1,14 @@
+[build]
+target = "thumbv7em-none-eabihf"
+
+[target.thumbv7em-none-eabihf]
+rustflags = [
+  "-C", "linker=rust-lld",
+]
+
+[package]
+name = "mb2_hue_change"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
