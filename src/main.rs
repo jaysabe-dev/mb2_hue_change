@@ -1,4 +1,13 @@
+#![deny(unsafe_code)]
+#![no_main]
+#![no_std]
 
-fn main() {
-    println!("Hello, world!");
+use cortex_m_rt::entry;
+use panic_rtt_target as _;
+
+#[entry]
+fn main() -> ! {
+    loop {
+        cortex_m::asm::wfi();
+    }
 }
